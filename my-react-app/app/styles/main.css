@@ -1,0 +1,197 @@
+/* Variables Kasa */
+:root {
+  --primary-color: #FF6060;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #F6F6F6;
+  --dark-gray: #484848;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--black);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* Layout */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: var(--primary-color);
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.logo img {
+  height: 47px;
+}
+
+.navigation {
+  display: flex;
+  gap: 57px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Home page styles */
+.home {
+  padding-bottom: 50px;
+}
+
+.hero {
+  position: relative;
+  height: 223px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 43px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+              #C4C4C4;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.properties-grid .properties-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 50px;
+  background-color: var(--gray);
+  border-radius: 25px;
+  padding: 56px 50px;
+}
+
+.property-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-image {
+  height: 255px;
+  position: relative;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), #FF8787);
+}
+
+.property-title {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .logo span {
+    font-size: 32px;
+  }
+
+  .navigation {
+    gap: 26px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    height: 111px;
+    margin-bottom: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    padding: 0 16px;
+  }
+
+  .properties-grid .properties-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 22px 20px;
+    background-color: transparent;
+  }
+
+  .main-content {
+    padding: 0 20px;
+  }
+}
